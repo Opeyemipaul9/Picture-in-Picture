@@ -7,14 +7,15 @@ async function selectMediaStream(){
     try{
         const mediaStream = await navigator.mediaDevices.getDisplayMedia();
         videoElement.srcObject = mediaStream;
-        videoElement.onloadmetadata = () => {
+        videoElement.onloadedmetadata = () => {
             videoElement.play();
+            console.log('media');
         }
     }
     catch(error){
         console.log('errors');
         // Catch Error Here
     }
-}
+} 
 
 selectMediaStream();
