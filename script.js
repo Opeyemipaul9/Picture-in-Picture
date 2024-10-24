@@ -1,5 +1,6 @@
 const videoElement =  document.getElementById('video');
 const button = document.getElementById('button');
+videoElement.hidden = true;
 
 // Prompt to select media stream , Pass to video element then play..
 
